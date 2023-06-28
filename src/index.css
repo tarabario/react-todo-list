@@ -7,6 +7,10 @@
 	padding: 0;
 }
 
+*:focus {
+	outline: none;
+}
+
 body {
 	font-family: Inter, sans-serif;
 	background: #1A1A1A;
@@ -78,8 +82,10 @@ header {
 	font-weight: 700;
 	line-height: 140%;
 	border: none;
+	transition: all 0.2s;
 }
-.new-task-button:hover {
+.new-task-button:hover,
+.new-task-button:focus {
 	background-color: #4EA8DE;
 }
 
@@ -162,15 +168,18 @@ header {
 	height: 1.5rem;
 	border-radius: 50%;
 	border: 2px solid #4EA8DE;
+	transition: all 0.2s;
 }
-.todo-item > input[type="checkbox"]:hover {
+.todo-item > input[type="checkbox"]:hover,
+.todo-item > input[type="checkbox"]:focus {
 	border: 2px solid #1E6F9F;
 }
 .todo-item > input[type="checkbox"]:checked {
 	border: none;
 	background: #5E60CE url(./images/checkmark.svg) 50% 50%/ 65% no-repeat;
 }
-.todo-item > input[type="checkbox"]:checked:hover {
+.todo-item > input[type="checkbox"]:checked:hover,
+.todo-item > input[type="checkbox"]:checked:focus {
 	background-color: #8284FA;
 }
 .todo-item > p {
@@ -186,7 +195,8 @@ header {
 	border: none;
 	transition: all 0.2s;
 }
-.button-delete-todo:hover {
+.button-delete-todo:hover,
+.button-delete-todo:focus {
 	background: #333333 url(./images/bin-hover.svg) 50% 50% no-repeat;
 }
 
